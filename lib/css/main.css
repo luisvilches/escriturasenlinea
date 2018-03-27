@@ -1,0 +1,97 @@
+html, body {
+    position: relative;
+    height: 100%;
+  }
+  body {
+    background: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color:#000;
+    margin: 0;
+    padding: 0;
+  }
+
+
+.navbar-brand {
+    width:100%;
+}
+
+.navbar-brand img {
+    margin: 0 auto;
+}
+
+.navbar{
+    border-bottom: 1px solid #bf0410;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+h1{
+    font-size: 25px;
+    color: #3a3a3a;
+    font-weight: 300;
+    /*padding: 20px 0px;*/
+}
+
+h2{
+    font-size: 25px;
+    color: #3a3a3a;
+    font-weight: 300;
+   /* padding: 20px 0px;*/
+}
+
+h3{
+    font-size: 25px;
+    color: #3a3a3a;
+    font-weight: 300;
+    
+}
+.res{
+    background: #f9f9f9;
+}
+
+strong{
+    font-weight: 700;
+}
+
+ul{
+    margin-left: -25px;
+}
+.contactUl{
+    margin-left: -40px;
+}
+.contactUl li{
+    list-style: none;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+.contactUl li i {
+    margin-right: 5px;
+}
+.hr{
+    max-width: 100px;
+    border: 2px solid #bf0410;
+    border-radius: 2px;
+}
+
+.borderRigth{
+    border-left:  1px solid #ccc;
+}
+
+.title{
+    padding: 20px 0px;
+}
+
+.btn-red{
+    background: #bf0410;
+    color: #fff;
+    border-color: #bf0410:
+}
+
+.banner{
+    background-image: url("../../lib/img/banner.jpg");
+    min-height: 400px;
+    background-repeat: no-repeat;
+    background: cover;
+}
