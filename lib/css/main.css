@@ -86,12 +86,36 @@ ul{
 .btn-red{
     background: #bf0410;
     color: #fff;
-    border-color: #bf0410:
+    border-color: #bf0410;
 }
 
 .banner{
-    background-image: url("../../lib/img/banner.jpg");
-    min-height: 400px;
-    background-repeat: no-repeat;
+    margin-top:20px;
+    background-image: url(../../lib/img/banner.jpge.jpg);
+    height: 400px;
     background: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media(max-width:768px){
+    .banner{
+        max-height: 200px;
+        background-position: center;
+    }
+}
+
+.whatsapp{
+    font-size: 16px;
+    margin-left: -20px;
+    color: #222;
+}
+
+.whatsapp i {
+    color: green;
+}
+
+header{
+    margin-bottom: 40px;
+    border-bottom: 1px solid #bf0410;
 }
