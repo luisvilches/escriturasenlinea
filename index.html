@@ -8,14 +8,14 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto+Condensed" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
     <link rel="stylesheet" href="lib/css/bootstrap.min.css">
-    <link rel="stylesheet" href="lib/css/swiper.min.css">
     <link rel="stylesheet" href="lib/css/main.css">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg">
         <a class="navbar-brand text-center">
             <img src="lib/img/logo.jpg" alt=""><br><hr>
-            <span class="whatsapp"><i class="fab fa-whatsapp"></i> +56 9 9795 0129</span>
+            <span class="whatsapp" onclick="sendWhatsapp()"><i class="fab fa-whatsapp"></i> +56 9 9795 0129</span>
         </a>
     </nav>
 
@@ -54,15 +54,15 @@
 
     <section class="container">
         <div class="row">
-            <div class="col-md-8">
-                <div class="row">
-                    <div class="col-md-12">
+            <div class="col-md-9">
+                <div class="">
+                    <article class="col-md-12">
                         <div class="title">
                             <h1>Hacemos simple y fácil todo tipo de trámites notariales, tenemos experiencia.</h1>
                             <hr align="left" >
                         </div>
                         <div class="body">
-                            <h6>NUESTROS SERVICIOS:</h6>
+                            <h6 class="bold">NUESTROS SERVICIOS:</h6>
                             <ul>
                                 <li><strong>Constitución de Sociedades:</strong>  “Empresa en Un Día” y Sociedades Sistema Tradicional</li>
                                 <li><strong>Redacción de Poderes:</strong>   Especiales y Generales, Bancarios, Sociedades, Judicial, Delegación de Poderes.</li>
@@ -70,8 +70,8 @@
                             </ul>
                             <span>“Al término de cada operación, gestionamos firmas en Notaría”.</span>
                         </div>
-                    </div>
-                    <div class="col-md-12">
+                    </article>
+                    <article class="col-md-12">
                         <div class="title">
                             <h2>Ayudamos a realizar trámites complejos a personas y empresas Gestionamos firma notarial en forma ágil</h2>
                             <hr align="left" >
@@ -80,8 +80,8 @@
                             <p>Nuestra experiencia nos permite ser eficientes en trámites tales como redacción de:</p>
                             <p>Constitución o transformación de sociedades, “Empresa en Un Día”, Sociedad SpA, Empresa Responsabilidad Limitada, EIRL, Poder venta propiedades, Poderes bancarios, Delegación de Poderes sociedades, Mandato judicial, Escrituras de cesión de derechos, Usufructo, Separación de bienes, Testamentos, Transferencia de propiedad, Contrato de compraventa y otros contratos.</p>
                         </div>
-                    </div>
-                    <div class="col-md-12">
+                    </article>
+                    <article class="col-md-12">
                         <div class="title">
                             <h2>Ejemplo de nuestra operación en línea</h2>
                             <hr align="left" >
@@ -93,14 +93,14 @@
                                 para concluir con algo pocas veces simplificado.
                             </p>
                         </div>
-                    </div>
+                    </article>
                 </div>
                 
 
             </div>
-            <div class="col-md-4">
+            <aside class="col-md-3">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12 pd1030">
                         <div class="title">
                             <h3 class="pd">Escriturasenlinea.cl</h3>
                             <hr class="hr" align="left" >
@@ -115,63 +115,82 @@
                         </div>
                     </div>
 
-                    <div class="col-md-12">
+                    <div class="col-md-12 pd1030">
                         <div class="title">
                             <h3>Conócenos</h3>
+                            <p>Consúltenos, lo contactaremos a la brevedad!</p>
                             <hr class="hr" align="left" >
                         </div>
-                        <div class="body">
-                            <p>Consúltenos, lo contactaremos a la brevedad!</p>
-                            <form action="">
+                        <div class="body" id="result">
+                           
+                            <form id="formulario">
                                 <div class="form-group">
                                     <label for="name">Nombre (requerido)</label>
-                                    <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Ingresar Nombre">
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Ingresar Nombre">
                                 </div>
                                 <div class="form-group">
                                     <label for="name">Tu correo electrónico (requerido)</label>
-                                    <input type="email" class="form-control" id="mail" aria-describedby="emailHelp" placeholder="Ingresar correo electrónico">
+                                    <input type="email" class="form-control" id="mail" name="mail" placeholder="Ingresar correo electrónico">
                                 </div>
                                 <div class="form-group">
                                     <label for="name">Asunto (requerido)</label>
-                                    <input type="text" class="form-control" id="asunto" aria-describedby="emailHelp" placeholder="Ingresar Asunto">
+                                    <input type="text" class="form-control" id="asunto" name="asunto" placeholder="Ingresar Asunto">
                                 </div>
                                 <div class="form-group">
                                     <label for="name">Mensaje (requerido)</label>
-                                    <textarea name="msg" id="" class="form-control" cols="30" rows="5"></textarea>
+                                    <textarea name="msg" id="msg" class="form-control" cols="30" rows="5"></textarea>
                                 </div>
-                                <input type="button" value="Enviar" class="btn btn-red">
+                                <div class="g-recaptcha" data-sitekey="6LfgOE8UAAAAAAD-0_XwDRIZ5YhbomeS65Dm9hjW"></div>
+                                <p id="recapcha"></p>
+                                <br>
+                                <input type="button" onclick="send()" value="Enviar" class="btn btn-red">
                             </form>
+                            <span id="alert" class="alert"></span>
                         </div>
                     </div>
                 </div>
-            </div>
+            </aside>
         </div>
     </section>
-
-    <section class="banner">
-
-    </section>
+    <section id="respuesta"></section>
+    <section class="banner"></section>
 
     <section class="container">
         <div class="row">
-            <div class="col-md-12">
-                <hr>
+            <div class="col-md-12 pd30">
+                <br>
                 <p>
                     Orientamos y acompañamos desde el inicio del proceso, a quienes, por falta de conocimiento y/o tiempo, les sea difícil realizar gestiones en uno o varios organismos externos como Conservador de Bienes Raíces, SII, Registro Civil y municipalidades. Ellos intervienen en los procesos previos a firmas y cierres de acuerdos.
                 </p>
                 <p>
                     Solo requiere concurrir presencialmente una vez para la firma notarial del documento.   Si utiliza una de nuestras notarias en convenio, será atendido de inmediato, evitando las largas esperas que muchas veces la tramitación requiere.
                 </p>
-                <span>Nuestro Equipo</span>
+                <span class="bold">Nuestro Equipo</span>
                 <p>Contamos con abogados y técnicos especialistas en asistencia legal, quienes serán los responsables de de gestionar su solicitud.  Informamos permanentemente los avances, para su tranquilidad.</p>
             </div>
         </div>
     </section>
 
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="text-left">
+                        Escrituraenlinea.cl
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <p class="text-right">
+                        Derechos reservados © 2018
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 
     <script src="lib/js/jquery-3.3.1.min.js"></script>
-    <script src="lib/js/bootstrap.min.js"></script>
-    <script src="lib/js/swiper.min.js"></script>
+    <script src="lib/js/bootstrap.min.js"></script> d
     <script src="lib/js/main.js"></script>
 </body>
 </html>

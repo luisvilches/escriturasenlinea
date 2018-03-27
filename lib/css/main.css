@@ -1,16 +1,15 @@
 html, body {
     position: relative;
     height: 100%;
-  }
-  body {
+}
+body {
     background: #fff;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
-    color:#000;
+    color:#444;
     margin: 0;
     padding: 0;
-  }
-
+}
 
 .navbar-brand {
     width:100%;
@@ -83,6 +82,10 @@ ul{
     padding: 20px 0px;
 }
 
+.body{
+    margin-bottom: 60px;
+}
+
 .btn-red{
     background: #bf0410;
     color: #fff;
@@ -96,6 +99,8 @@ ul{
     background: cover;
     background-repeat: no-repeat;
     background-size: cover;
+    border-bottom: 1px solid #bf0410;
+    border-top: 1px solid #bf0410;
 }
 
 @media(max-width:768px){
@@ -103,12 +108,16 @@ ul{
         max-height: 200px;
         background-position: center;
     }
+    .pd1030{
+        padding: 10px 30px;
+    }
 }
 
 .whatsapp{
     font-size: 16px;
     margin-left: -20px;
     color: #222;
+    cursor: pointer;
 }
 
 .whatsapp i {
@@ -118,4 +127,66 @@ ul{
 header{
     margin-bottom: 40px;
     border-bottom: 1px solid #bf0410;
+}
+
+.container {
+    max-width: 1320px;
+}
+
+.bold{
+    font-weight: 900;
+    color: #222 !important;
+}
+
+.pd30{
+    padding: 10px 30px;
+}
+
+.pd30 p {
+    margin-bottom: 30px;
+}
+
+footer{
+    background: #222;
+    color: #fff!important;
+    padding: 20px;
+    border-top: 1px solid #bf0410;
+    padding-top: 30px; 
+}
+
+input,textarea{
+    font-size: 12px!important;
+}
+
+.alert{
+    color: #bf0410;
+    font-size: 14px;
+    margin-left: -20px;
+    display: none;
+}
+
+#mensaje{
+    color: green;
+    letter-spacing: 2px;
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.tmp{
+    padding: 20px;
+    background: #f9f9f9;
+}
+
+.tmp h4{
+    color: green;
+    letter-spacing: 2px;
+    font-size: 18px;
+    text-align: left;
+}
+
+.recapcha{
+    color: red;
+    font-size: 12px;
+    display: none;
 }
