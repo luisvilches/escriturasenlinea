@@ -111,6 +111,22 @@ ul{
     .pd1030{
         padding: 10px 30px;
     }
+
+    footer .text1{
+        text-align: center !important;
+    }
+    
+    footer .text2{
+        text-align: center !important;
+    }
+}
+
+footer .text1{
+    text-align: left;
+}
+
+footer .text2{
+    text-align: right;
 }
 
 .whatsapp{
