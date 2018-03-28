@@ -140,6 +140,10 @@ footer .text2{
     color: green;
 }
 
+.whatsapp img {
+    position: relative;
+    top: -2px;
+}
 header{
     margin-bottom: 40px;
     border-bottom: 1px solid #bf0410;
